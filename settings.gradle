@@ -1,4 +1,5 @@
 rootProject.name = "hello-worlds"
 
 include ":spring-boot:kotlin"
+include ":spring-boot:java"
 

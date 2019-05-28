@@ -33,12 +33,7 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1"
     compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
-    //itest
     testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
-
-    //junit5
-    testCompile "org.junit.jupiter:junit-jupiter-api:5.3.2"
-    testRuntime "org.junit.jupiter:junit-jupiter-engine:5.3.2"
 }
 
 buildscript {
@@ -50,17 +45,12 @@ buildscript {
     }
     dependencies {
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
-        classpath 'ca.cutterslade.gradle:gradle-dependency-analyze:1.0.3'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
         classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion"
     }
 }
 
-jar {
-    baseName = "hello"
-    version = "1.0"
-}
-
 bootJar {
+    baseName = "spring-boot-kotlin"
     launchScript()
 }
