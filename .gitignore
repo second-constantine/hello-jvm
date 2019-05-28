@@ -1,0 +1,13 @@
+.idea/**
+**/.gradle/**
+gradle/**
+**/node_modules/**
+**/package-lock.json
+conbot/src/main/resources/static/**
+**/build/**
+**/out/**
+**/target/**
+gradlew
+gradlew.bat
+*.iml
+*.mwb.war
