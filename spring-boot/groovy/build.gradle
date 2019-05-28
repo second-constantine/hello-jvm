@@ -1,0 +1,35 @@
+apply plugin: "org.springframework.boot"
+apply plugin: 'groovy'
+group 'by.next.way'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+    jcenter()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.5.7'
+    compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+}
+
+buildscript {
+    ext.springBootVersion = "2.1.0.RELEASE"
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+    }
+}
+
+bootJar {
+    baseName = "spring-boot-groovy"
+    launchScript()
+}
