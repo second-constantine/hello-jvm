@@ -1,4 +1,3 @@
-apply plugin: "org.springframework.boot"
 apply plugin: 'kotlin'
 group 'by.next.way'
 
@@ -39,20 +38,13 @@ dependencies {
 }
 
 buildscript {
-  ext.springBootVersion = "2.1.0.RELEASE"
   ext.kotlinVersion = "1.3.31"
   repositories {
     mavenCentral()
     jcenter()
   }
   dependencies {
-    classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
     classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
     classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion"
   }
-}
-
-bootJar {
-  baseName = "cucumber-kotlin"
-  launchScript()
 }
