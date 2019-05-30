@@ -7,3 +7,4 @@
 2. Spring boot with java
 3. Spring boot with groovy
 4. Cucumber with kotlin
+5. Map struct with java
