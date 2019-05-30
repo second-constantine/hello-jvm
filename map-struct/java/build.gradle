@@ -1,0 +1,40 @@
+apply plugin: 'net.ltgt.apt'
+apply plugin: "java"
+apply plugin: "org.springframework.boot"
+group 'by.next.way'
+
+buildscript {
+  ext.springBootVersion = "2.1.0.RELEASE"
+  repositories {
+    mavenCentral()
+    maven {
+      url 'https://plugins.gradle.org/m2/'
+    }
+  }
+  dependencies {
+    classpath "net.ltgt.apt:net.ltgt.apt.gradle.plugin:0.8"
+    classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+  }
+}
+
+repositories {
+  mavenLocal()
+  mavenCentral()
+  jcenter()
+}
+
+test {
+  useJUnitPlatform()
+}
+
+dependencies {
+  compile "org.mapstruct:mapstruct-jdk8:1.2.0.Final"
+  compile "org.mapstruct:mapstruct-processor:1.2.0.Final"
+  testCompile "org.junit.jupiter:junit-jupiter-api:5.3.2"
+  testRuntime "org.junit.jupiter:junit-jupiter-engine:5.3.2"
+}
+
+bootJar {
+  baseName = "map-struct-java"
+  launchScript()
+}

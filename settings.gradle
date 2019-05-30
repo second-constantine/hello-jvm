@@ -6,3 +6,7 @@ include ":spring-boot:groovy"
 
 include ":grps:kotlin"
 
+include ":map-struct:java"
+
+include ":cucumber:kotlin"
+
