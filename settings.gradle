@@ -4,7 +4,7 @@ include ":spring-boot:kotlin"
 include ":spring-boot:java"
 include ":spring-boot:groovy"
 
-include ":grps:kotlin"
+include ":protobuf:kotlin"
 
 include ":map-struct:java"
 

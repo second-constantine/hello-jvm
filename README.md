@@ -9,3 +9,4 @@
 4. Cucumber with kotlin
 5. Map struct with java
 6. Ktor + jetty with kotlin
+7. Spring boot + protobuf with kotlin
