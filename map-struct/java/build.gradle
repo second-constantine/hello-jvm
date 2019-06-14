@@ -2,7 +2,7 @@ apply plugin: 'net.ltgt.apt'
 apply plugin: "java"
 group 'by.next.way'
 
-sourceSets.main.java.srcDirs += ['build/generated/sources/apt']
+sourceSets.main.java.srcDirs += ['build/generated/source/apt']
 
 buildscript {
   ext.springBootVersion = "2.1.0.RELEASE"

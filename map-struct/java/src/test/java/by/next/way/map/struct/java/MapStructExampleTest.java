@@ -1,9 +1,12 @@
 package by.next.way.map.struct.java;
 
+import by.next.way.map.struct.java.SourceTargetMapperImpl;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 public class MapStructExampleTest {
+
+  private SourceTargetMapper sourceTargetMapper = new SourceTargetMapperImpl();
 
   @Test
   public void shouldApplyConversions() {
@@ -12,7 +15,7 @@ public class MapStructExampleTest {
     source.setBar(23L);
     source.setZip(73);
 
-    Target target = SourceTargetMapper.INSTANCE.sourceToTarget(source);
+    Target target = sourceTargetMapper.sourceToTarget(source);
 
     Assertions.assertNotNull(target);
     Assertions.assertEquals(42L, (long) target.getFoo());
@@ -23,12 +26,11 @@ public class MapStructExampleTest {
   @Test
   public void shouldHandleNulls() {
     Source source = new Source();
-    Target target = SourceTargetMapper.INSTANCE.sourceToTarget(source);
-
-//    assertThat(target).isNotNull();
-//    assertThat(target.getFoo()).isEqualTo(0L);
-//    assertThat(target.getBar()).isEqualTo(0);
-//    assertThat(target.getZip()).isEqualTo("0");
+    Target target = sourceTargetMapper.sourceToTarget(source);
+    Assertions.assertNotNull(target);
+    Assertions.assertEquals(0L, (long) target.getFoo());
+    Assertions.assertEquals(0, target.getBar());
+    Assertions.assertEquals("0", target.getZip());
   }
 
   @Test
@@ -37,11 +39,11 @@ public class MapStructExampleTest {
     source.setQax(42);
     source.setBaz(23L);
 
-    Target target = SourceTargetMapper.INSTANCE.sourceToTarget(source);
+    Target target = sourceTargetMapper.sourceToTarget(source);
 
-//    assertThat(target).isNotNull();
-//    assertThat(target.getBaz()).isEqualTo(42L);
-//    assertThat(target.getQax()).isEqualTo(23);
+    Assertions.assertNotNull(target);
+    Assertions.assertEquals(42, (long) target.getBaz());
+    Assertions.assertEquals(23, target.getQax());
   }
 
   @Test
@@ -51,12 +53,12 @@ public class MapStructExampleTest {
     target.setBar(23);
     target.setZip("73");
 
-    Source source = SourceTargetMapper.INSTANCE.targetToSource(target);
+    Source source = sourceTargetMapper.targetToSource(target);
 
-//    assertThat(source).isNotNull();
-//    assertThat(source.getFoo()).isEqualTo(42);
-//    assertThat(source.getBar()).isEqualTo(23);
-//    assertThat(source.getZip()).isEqualTo(73);
+    Assertions.assertNotNull(source);
+    Assertions.assertEquals(42, (long) source.getFoo());
+    Assertions.assertEquals(23, (long) source.getBar());
+    Assertions.assertEquals(73, source.getZip());
   }
 
   @Test
@@ -65,10 +67,10 @@ public class MapStructExampleTest {
     target.setQax(42);
     target.setBaz(23L);
 
-    Source source = SourceTargetMapper.INSTANCE.targetToSource(target);
+    Source source = sourceTargetMapper.targetToSource(target);
 
-//    assertThat(source).isNotNull();
-//    assertThat(source.getBaz()).isEqualTo(42);
-//    assertThat(source.getQax()).isEqualTo(23);
+    Assertions.assertNotNull(source);
+    Assertions.assertEquals(42, (long) source.getBaz());
+    Assertions.assertEquals(23, source.getQax());
   }
 }
