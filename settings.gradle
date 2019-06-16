@@ -12,3 +12,5 @@ include ":cucumber:kotlin"
 
 include ":jetty:kotlin-ktor"
 
+include ":rsocket:kotlin"
+

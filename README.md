@@ -10,3 +10,4 @@
 5. Map struct with java
 6. Ktor + jetty with kotlin
 7. Spring boot + protobuf with kotlin
+8. Spring boot + netty + rsocket with kotlin
