@@ -13,3 +13,4 @@
 8. Spring boot + netty + rsocket with kotlin - **rsocket/kotlin**
 9. Simple jooq mysql connector with kotlin - **mysql/jooq/kotlin**
 10. Mongo template with kotlin - **mongo/mongo-template/kotlin**
+11. AWS Serverless(Lambda) with kotlin(java run for idea plugin) - **aws/kotlin**

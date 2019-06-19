@@ -17,3 +17,5 @@ include ":rsocket:kotlin"
 include ":mysql:jooq:kotlin"
 
 include ":mongo:mongo-template:kotlin"
+
+include ":aws:kotlin"
