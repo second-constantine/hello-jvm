@@ -12,3 +12,4 @@
 7. Spring boot + protobuf with kotlin
 8. Spring boot + netty + rsocket with kotlin
 9. Simple jooq mysql connector with kotlin
+10. Mongo template with kotlin
