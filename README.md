@@ -3,13 +3,13 @@
 
 #
 ### Hello worlds
-1. Spring boot with kotlin
-2. Spring boot with java
-3. Spring boot with groovy
-4. Cucumber with kotlin
-5. Map struct with java
-6. Ktor + jetty with kotlin
-7. Spring boot + protobuf with kotlin
-8. Spring boot + netty + rsocket with kotlin
-9. Simple jooq mysql connector with kotlin
-10. Mongo template with kotlin
+1. Spring boot with kotlin - **spring-boot/kotlin**
+2. Spring boot with java - **spring-boot/java**
+3. Spring boot with groovy - **spring-boot/groovy**
+4. Cucumber with kotlin - **cucumber/kotlin**
+5. Map struct with java - **map-struct/java**
+6. Ktor + jetty with kotlin - **jetty/kotlin-ktor**
+7. Spring boot + protobuf with kotlin - **protobuf/kotlin**
+8. Spring boot + netty + rsocket with kotlin - **rsocket/kotlin**
+9. Simple jooq mysql connector with kotlin - **mysql/jooq/kotlin**
+10. Mongo template with kotlin - **mongo/mongo-template/kotlin**
