@@ -15,3 +15,5 @@ include ":jetty:kotlin-ktor"
 include ":rsocket:kotlin"
 
 include ":mysql:jooq:kotlin"
+
+include ":mongo:mongo-template:kotlin"
