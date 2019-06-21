@@ -19,3 +19,7 @@ include ":mysql:jooq:kotlin"
 include ":mongo:mongo-template:kotlin"
 
 include ":aws:kotlin"
+
+include ":communications:feign:kotlin"
+include ":communications:http-client:kotlin"
+include ":communications:rest-template:kotlin"
