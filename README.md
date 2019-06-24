@@ -15,3 +15,5 @@
 10. Mongo template with kotlin - **mongo/mongo-template/kotlin**
 11. AWS Serverless(Lambda) with kotlin(java run for idea plugin) - **aws/kotlin**
 12. Http client (apache) with kotlin - **communications/http-client/kotlin**
+13. RestTemplate (spring web) with kotlin - **communications/rest-template/kotlin**
+14. Feign connector with kotlin - **communications/feign/kotlin**
