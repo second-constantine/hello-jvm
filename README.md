@@ -17,3 +17,5 @@
 12. Http client (apache) with kotlin - **communications/http-client/kotlin**
 13. RestTemplate (spring web) with kotlin - **communications/rest-template/kotlin**
 14. Feign connector with kotlin - **communications/feign/kotlin**
+15. Retrofit connector with kotlin - **communications/retrofit/kotlin**
+                                   
