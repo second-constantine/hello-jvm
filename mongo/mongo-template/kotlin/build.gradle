@@ -1,9 +1,6 @@
 apply plugin: 'kotlin'
 group 'by.next.way'
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
-
 repositories {
     mavenLocal()
     mavenCentral()
@@ -28,33 +25,27 @@ test {
 
 dependencies {
 
-    compile "org.mongodb:mongo-java-driver:${mongoDriverVersion}"
-    compile "org.springframework.data:spring-data-mongodb:${mongoSpringVersion}"
-    
-    compile "log4j:log4j:${log4jVersion}"
-    compile "org.apache.logging.log4j:log4j-api:${log4jApacheVersion}"
-    compile "org.apache.logging.log4j:log4j-core:${log4jApacheVersion}"
-    
+    compile "org.mongodb:mongo-java-driver:3.10.2"
+    compile "org.springframework.data:spring-data-mongodb:2.1.9.RELEASE"
+
+    compile "org.apache.logging.log4j:log4j-api:2.11.2"
+    compile "org.apache.logging.log4j:log4j-core:2.11.2"
+
     compile "org.jetbrains.kotlin:kotlin-reflect"
     compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1"
 
-    testCompile "org.junit.jupiter:junit-jupiter-api:5.3.2"
-    testRuntime "org.junit.jupiter:junit-jupiter-engine:5.3.2"
+    testCompile "org.junit.jupiter:junit-jupiter-api:5.4.2"
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:5.4.2"
 }
 
 buildscript {
-    ext.mongoDriverVersion = "3.6.3"
-    ext.mongoSpringVersion = "2.0.6.RELEASE"
-    ext.kotlinVersion = "1.3.31"
-    ext.log4jVersion = "1.2.14"
-    ext.log4jApacheVersion = "2.1"
     repositories {
         mavenCentral()
         jcenter()
     }
     dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
-        classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinVersion"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.40"
+        classpath "org.jetbrains.kotlin:kotlin-allopen:1.3.40"
     }
 }

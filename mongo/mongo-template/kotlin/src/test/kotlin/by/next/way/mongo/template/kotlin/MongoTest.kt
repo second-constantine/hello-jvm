@@ -1,5 +1,6 @@
 package by.next.way.mongo.template.kotlin
 
+import org.apache.logging.log4j.LogManager
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
@@ -18,5 +19,13 @@ class MongoTest {
         mongoTemplate.save(HelloWorldData())
         val allInMongo = mongoTemplate.find(Query(), HelloWorldData::class.java)
         Assertions.assertTrue(allInMongo.isNotEmpty())
+        log.info(allInMongo.size)
+        for(item in allInMongo) {
+            mongoTemplate.remove(item)
+        }
+    }
+
+    companion object {
+        private val log = LogManager.getLogger()
     }
 }

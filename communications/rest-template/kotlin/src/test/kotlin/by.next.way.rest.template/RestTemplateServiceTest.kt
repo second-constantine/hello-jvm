@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import org.springframework.http.HttpEntity
 import org.springframework.web.client.RestTemplate
+import java.net.URI
 
 @Disabled
 class RestTemplateServiceTest {
@@ -14,14 +15,16 @@ class RestTemplateServiceTest {
     @Test
     fun post() {
         val request = HttpEntity("Hello world!")
-        val response = restTemlate.postForObject("https://postman-echo.com/post", request, String::class.java)
+        val response = restTemlate.postForObject(URI("https://postman-echo.com/post"), request, String::class.java)
+                ?: "error 500"
         Assertions.assertTrue(response.contains("Hello world!"))
     }
 
 
     @Test
     fun get() {
-        val response = restTemlate.getForObject("https://next-way.by/", String::class.java)
+        val response = restTemlate.getForObject(URI("https://next-way.by/"), String::class.java)
+                ?: "error 500"
         Assertions.assertTrue(response.contains("second-constantine"))
     }
 }

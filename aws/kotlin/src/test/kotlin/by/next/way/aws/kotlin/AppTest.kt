@@ -1,9 +1,10 @@
 package by.next.way.aws.kotlin
 
-import org.junit.Assert.*
-import org.junit.Test
+import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Test
 
 class AppTest {
+
     @Test
     fun successfulResponse() {
         val app = AwsLambda()

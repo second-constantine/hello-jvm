@@ -3,7 +3,7 @@ package by.next.way.rsocket.kotlin
 import io.rsocket.RSocketFactory
 import io.rsocket.transport.netty.client.TcpClientTransport
 import io.rsocket.util.DefaultPayload
-import org.junit.Assert
+import org.junit.Assert.assertEquals
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.boot.test.context.SpringBootTest
@@ -14,7 +14,6 @@ import org.springframework.test.context.junit4.SpringRunner
 @SpringBootTest
 class SpringRsocketApplicationTests {
 
-
     @Test
     fun testRsocket() {
         val client = RSocketFactory.connect()
@@ -22,7 +21,7 @@ class SpringRsocketApplicationTests {
                 .start()
                 .block()!!
         val result = client.requestStream(DefaultPayload.create("Rsocket", "META")).blockLast()
-        Assert.assertEquals("Hello, Rsocket!!!", result?.dataUtf8)
+        assertEquals("Hello, Rsocket!!!", result?.dataUtf8)
     }
 
 }

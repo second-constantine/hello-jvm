@@ -8,9 +8,11 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.amazonaws:aws-lambda-java-core:1.2.0'
-    testImplementation 'junit:junit:4.12'
-    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile 'com.amazonaws:aws-lambda-java-core:1.2.0'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    
+    testCompile "org.junit.jupiter:junit-jupiter-api:5.4.2"
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:5.4.2"
 }
 
 compileKotlin {

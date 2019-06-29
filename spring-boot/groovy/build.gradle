@@ -14,18 +14,20 @@ test {
 
 dependencies {
     compile 'org.codehaus.groovy:groovy-all:2.5.7'
-    compile "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
-    testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE"
+    testCompile "org.springframework.boot:spring-boot-starter-test:2.1.6.RELEASE"
+    
+    testCompile "org.junit.jupiter:junit-jupiter-api:5.4.2"
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:5.4.2"
 }
 
 buildscript {
-    ext.springBootVersion = "2.1.0.RELEASE"
     repositories {
         mavenCentral()
         jcenter()
     }
     dependencies {
-        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:2.1.6.RELEASE"
     }
 }
 

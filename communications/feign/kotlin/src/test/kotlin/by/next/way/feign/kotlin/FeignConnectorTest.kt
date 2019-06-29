@@ -1,5 +1,6 @@
 package by.next.way.feign.kotlin
 
+import org.apache.logging.log4j.LogManager
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
@@ -12,6 +13,11 @@ class FeignConnectorTest {
     @Test
     fun post() {
         val response = fiegnConnector.post("Hello world!")
+        log.info(response)
         Assertions.assertTrue(response.contains("Hello world!"))
+    }
+
+    companion object {
+        private val log = LogManager.getLogger()
     }
 }
