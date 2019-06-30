@@ -12,3 +12,4 @@ gradlew.bat
 *.mwb.war
 .DS_Store
 **/gradlew**
+hibernate/spring-java/com.baeldung.hibernatesearch.model.Product/**
