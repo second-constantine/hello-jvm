@@ -28,3 +28,4 @@ include ":communications:retrofit:kotlin"
 include ":hibernate:spring-java"
 
 include ":hystrix:kotlin"
+include ":hystrix:java"
