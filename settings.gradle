@@ -29,3 +29,5 @@ include ":hibernate:spring-java"
 
 include ":hystrix:kotlin"
 include ":hystrix:java"
+
+include ":hadoop:spring:kotlin"
