@@ -31,3 +31,5 @@ include ":hystrix:kotlin"
 include ":hystrix:java"
 
 include ":hadoop:spring:kotlin"
+
+include ":spring-data-rest:kotlin"

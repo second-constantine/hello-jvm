@@ -20,4 +20,5 @@
 15. Retrofit connector with kotlin - **communications/retrofit/kotlin**
 16. Hibernate5 + spring with java - **hibernate/spring-java**
 17. Hystrix with kotlin - **hystrix/kotlin**        
-18. Hystrix with java - **hystrix/java**                          
+18. Hystrix with java - **hystrix/java**
+19. Spring Data Rest with kotlin - **spring-data-rest/kotlin**                         
