@@ -7,8 +7,6 @@ include ":spring-boot:scala"
 
 include ":protobuf:kotlin"
 
-include ":map-struct:java"
-
 include ":cucumber:kotlin"
 
 include ":jetty:kotlin-ktor"
@@ -34,3 +32,6 @@ include ":hystrix:java"
 include ":hadoop:spring:kotlin"
 
 include ":spring-data-rest:kotlin"
+
+//include ":map-struct:java"
+include ":machine-learning:tenserflow:kotlin"
