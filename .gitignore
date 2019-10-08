@@ -10,6 +10,7 @@ gradlew
 gradlew.bat
 *.iml
 *.mwb.war
+*.ml
 .DS_Store
 **/gradlew**
 hibernate/spring-java/com.baeldung.hibernatesearch.model.Product/**

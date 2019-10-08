@@ -1,37 +1,29 @@
-rootProject.name = "hello-worlds"
+rootProject.name = "hello-jvm"
 
 include ":spring-boot:groovy"
 include ":spring-boot:java"
 include ":spring-boot:kotlin"
 include ":spring-boot:scala"
+include ":jetty:ktor"
+include ":aws"
 
-include ":protobuf:kotlin"
+include ":spring-data-rest"
+include ":mysql-jooq"
+include ":mongo-template"
 
-include ":cucumber:kotlin"
+include ":hystrix"
+include ":rsocket"
+include ":protobuf"
+include ":communications:feign"
+include ":communications:http-client"
+include ":communications:rest-template"
+include ":communications:retrofit"
 
-include ":jetty:kotlin-ktor"
+include ":hadoop"
+include ":cucumber"
 
-include ":rsocket:kotlin"
-
-include ":mysql:jooq:kotlin"
-
-include ":mongo:mongo-template:kotlin"
-
-include ":aws:kotlin"
-
-include ":communications:feign:kotlin"
-include ":communications:http-client:kotlin"
-include ":communications:rest-template:kotlin"
-include ":communications:retrofit:kotlin"
-
-include ":hibernate:spring-java"
-
-include ":hystrix:kotlin"
-include ":hystrix:java"
-
-include ":hadoop:spring:kotlin"
-
-include ":spring-data-rest:kotlin"
+include ":machine-learning:deeplearning4j"
+include ":machine-learning:simple-neural-network"
 
 //include ":map-struct:java"
 include ":machine-learning:tenserflow:kotlin"
