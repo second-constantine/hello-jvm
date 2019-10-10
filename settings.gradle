@@ -6,6 +6,7 @@ include ":spring-boot:kotlin"
 include ":spring-boot:scala"
 include ":jetty:ktor"
 include ":aws"
+include ":spring-boot-webflux-swagger"
 
 include ":spring-data-rest"
 include ":mysql-jooq"
