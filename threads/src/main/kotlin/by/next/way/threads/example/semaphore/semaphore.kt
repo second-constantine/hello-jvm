@@ -1,4 +1,4 @@
-package by.next.way.threads.example
+package by.next.way.threads.example.semaphore
 
 import java.util.concurrent.Semaphore
 
