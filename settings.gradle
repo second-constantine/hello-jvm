@@ -26,5 +26,6 @@ include ":cucumber"
 include ":machine-learning:deeplearning4j"
 include ":machine-learning:simple-neural-network"
 
-//include ":map-struct:java"
+include ":threads"
+
 include ":machine-learning:tenserflow:kotlin"
