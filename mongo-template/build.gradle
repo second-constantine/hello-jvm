@@ -1,6 +1,33 @@
 apply plugin: 'kotlin'
 group 'by.next.way'
 
+dependencies {
+
+    compile "org.mongodb:mongo-java-driver:$mongoDriverVersion"
+    compile "org.springframework.data:spring-data-mongodb:$springBootVersion"
+
+    compile "org.apache.logging.log4j:log4j-api:$log4jVersion"
+    compile "org.apache.logging.log4j:log4j-core:$log4jVersion"
+
+    compile "org.jetbrains.kotlin:kotlin-reflect"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlinCoroutinesVersion"
+
+    testCompile "org.junit.jupiter:junit-jupiter-api:$jupiterVersion"
+    testRuntime "org.junit.jupiter:junit-jupiter-engine:$jupiterVersion"
+}
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinPluginVersion"
+        classpath "org.jetbrains.kotlin:kotlin-allopen:$kotlinPluginVersion"
+    }
+}
+
 repositories {
     mavenLocal()
     mavenCentral()
@@ -21,31 +48,4 @@ compileKotlin {
 
 test {
     useJUnitPlatform()
-}
-
-dependencies {
-
-    compile "org.mongodb:mongo-java-driver:3.10.2"
-    compile "org.springframework.data:spring-data-mongodb:2.1.9.RELEASE"
-
-    compile "org.apache.logging.log4j:log4j-api:2.11.2"
-    compile "org.apache.logging.log4j:log4j-core:2.11.2"
-
-    compile "org.jetbrains.kotlin:kotlin-reflect"
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
-    compile "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.2.1"
-
-    testCompile "org.junit.jupiter:junit-jupiter-api:5.4.2"
-    testRuntime "org.junit.jupiter:junit-jupiter-engine:5.4.2"
-}
-
-buildscript {
-    repositories {
-        mavenCentral()
-        jcenter()
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.40"
-        classpath "org.jetbrains.kotlin:kotlin-allopen:1.3.40"
-    }
 }
