@@ -9,5 +9,4 @@ data class HelloWorldData(
         val number: Int = 0,
         val success: Boolean = true,
         val time: String = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm"))
-
 )

@@ -11,16 +11,16 @@ class MongoTest {
 
     @Test
     fun invoke() {
-        val mongoConfiguration = MongoConfiguration(MongoSettings(
-                name = "test_hello",
-                hosts = arrayListOf("localhost:27017")
-        ))
+        val mongoConfiguration = MongoConfiguration(
+                databaseName = "test_hello",
+                host = "localhost:27017"
+        )
         val mongoTemplate = mongoConfiguration.mongoTemplate()
         mongoTemplate.save(HelloWorldData())
         val allInMongo = mongoTemplate.find(Query(), HelloWorldData::class.java)
         Assertions.assertTrue(allInMongo.isNotEmpty())
         log.info(allInMongo.size)
-        for(item in allInMongo) {
+        for (item in allInMongo) {
             mongoTemplate.remove(item)
         }
     }

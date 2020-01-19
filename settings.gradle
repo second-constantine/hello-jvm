@@ -16,9 +16,8 @@ include ":communications:http-client"
 include ":communications:rest-template"
 include ":communications:retrofit"
 
-include ":machine-learning:deeplearning4j"
 include ":machine-learning:simple-neural-network"
 
 include ":threads"
 
-include ":machine-learning:tenserflow:kotlin"
+include ":rabbitmq"
