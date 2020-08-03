@@ -17,6 +17,7 @@ include ":communications:rest-template"
 include ":communications:retrofit"
 
 include ":machine-learning:simple-neural-network"
+include ":secure:signal-com"
 
 include ":threads"
 
